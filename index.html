@@ -21,11 +21,26 @@
 
 <body>
   <div class="container mt-5">
-    <section id="welcome" class="row">
+    <section id="testInput" class="row">
       <div class="col-lg-8">
-        <p>Test</p>
+        <p>Test Question: Which state do you want to live in?</p>
+        <form id="testForm">
+            <input type="radio" id="florida" class="stateOption" name="state_answer" value="Florida">
+            <label for="florida">Florida</label><br>
+            <input type="radio" id="texas" class="stateOption" name="state_answer" value="Texas">
+            <label for="texas">Texas</label><br>
+            <input type="radio" id="california" class="stateOption" name="state_answer" value="California">
+            <label for="california">California</label><br>
+            <button id="btn">Submit</button>
+        </form>
       </div>
     </section>
+
+    <section class="row">
+      <div id="testOutput" class="col-lg-8"></div>
+    </section>
+
+    <section id="welcome" class="row"></section>
     <section id="population" class="row"></section>
     <section id="weather" class="row"></section>
     <section id="landscape" class="row"></section>
@@ -38,7 +53,9 @@
   <!-- Firebase Initialization -->
   <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -55,7 +72,14 @@
     // Initialize Firebase (Code below learned from: https://www.youtube.com/watch?v=BOITPwChVP4)
     const app = initializeApp(firebaseConfig);
 
-    import {getDatabase, ref, get, set, update, remove} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+    import {
+      getDatabase,
+      ref,
+      get,
+      set,
+      update,
+      remove
+    } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 
     const db = getDatabase();
 
@@ -63,6 +87,7 @@
     // var weather = document.getElementById('weather');
   </script>
   <script src="scripts/firebase.js"></script>
+  <script src="scripts/allCities.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 
