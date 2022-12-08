@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dream City Locator</title>
+  <title>Dream Weather & Landscape Locator</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,44 +50,9 @@
 
   </div>
 
-  <!-- Firebase Initialization -->
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import {
-      initializeApp
-    } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBc4LrtJPSKjcdW7jyOoV4EF5EI_BuN1wo",
-      authDomain: "dream-city-locator.firebaseapp.com",
-      projectId: "dream-city-locator",
-      storageBucket: "dream-city-locator.appspot.com",
-      messagingSenderId: "23759543244",
-      appId: "1:23759543244:web:a4de4e4dd1909e982b9b69"
-    };
-
-    // Initialize Firebase (Code below learned from: https://www.youtube.com/watch?v=BOITPwChVP4)
-    const app = initializeApp(firebaseConfig);
-
-    import {
-      getDatabase,
-      ref,
-      get,
-      set,
-      update,
-      remove
-    } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
-
-    const db = getDatabase();
-
-    // References
-    // var weather = document.getElementById('weather');
-  </script>
-  <script src="scripts/firebase.js"></script>
   <script src="scripts/allCities.js"></script>
+  <script src="scripts/testWeatherData.js"></script>
+  <script src="scripts/countyDailyWeather.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 
